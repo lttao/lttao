@@ -1,14 +1,16 @@
 <template>
   <div @click="change" class="checkbox" checkbox>
-    <div :class="value ? 'checkbox-checked' : ''" class="checkbox-btn"></div>
-    <slot></slot>
+    <div :class="isChecked ? 'checkbox-checked' : ''" class="checkbox-btn"></div>
+    <span class="checkbox-label">
+      <slot></slot>
+    </span>
   </div>
 
 </template>
 
 <script>
   export default {
-    name: "index",
+    name: "checkbox",
     props: {
       value: {
         type: Boolean,
@@ -18,15 +20,25 @@
     },
     computed: {
       // 是否被Group组件包裹
-      isGroup () {
-        return this.$parent.$options._componentTag === "checkbox-group";
+      isGroup() {
+        // 拿到父组件的名称
+        const { $parent: { $options: { name: parentName } } } = this;
+        return parentName === "checkboxGroup";
+      },
+      // 是否选中
+      isChecked() {
+        const { isGroup, value } = this;
+        if (!isGroup) return value;
+
+        const { name, $parent: { value: parentValue } } = this;
+        return parentValue.some(item => item === name);
       }
     },
     methods: {
       change() {
         const { isGroup } = this;
         if (isGroup) {
-          console.log("被Group组件包裹");
+          // console.log("被Group组件包裹");
           this.$parent.change(this.name);
         } else {
           this.$emit("input", !this.value);
@@ -39,10 +51,9 @@
 <style scoped lang="scss">
   .checkbox[checkbox] {
     cursor: pointer;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     .checkbox-btn {
-      margin-right: 10px;
       width: 15px;
       height: 15px;
       border-radius: 2px;
@@ -51,6 +62,9 @@
     .checkbox-checked {
       border: solid 1px #4c84ff;
       background: #4c84ff;
+    }
+    .checkbox-label {
+      padding: 0 10px;
     }
   }
 </style>

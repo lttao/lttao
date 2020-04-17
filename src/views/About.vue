@@ -1,8 +1,10 @@
 <template>
   <div class="about">
+    <lt-input v-model="value" placeholder="请输入" /> <div>{{ value }}</div>
     <checkbox v-model="checked">{{ checked }}</checkbox>
 
     <checkbox-group v-model="checkboxValue">
+      <checkbox :name="0">select</checkbox>
       <checkbox :name="1">select</checkbox>
       <checkbox :name="2">select</checkbox>
     </checkbox-group>
@@ -14,18 +16,22 @@
 </template>
 
 <script>
-  import checkboxGroup from  "@/components/checkbox-group"
-import checkbox from "@/components/checkbox"
+
+  import checkboxGroup from  "@/components/checkbox-group";
+import checkbox from "@/components/checkbox";
+  import ltInput from "@/components/input";
   export default {
     name: "about",
     components: {
       checkbox,
-      checkboxGroup
+      checkboxGroup,
+      ltInput
     },
     data() {
       return {
+        value: '',
         checked: false,
-        checkboxValue: []
+        checkboxValue: [1]
       }
     },
     methods: {
