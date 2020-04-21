@@ -1,0 +1,65 @@
+{
+  "id": "1769150",
+  "name": "lttao-ui",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "937495",
+      "name": "down",
+      "font_class": "down",
+      "unicode": "e610",
+      "unicode_decimal": 58896
+    },
+    {
+      "icon_id": "1111849",
+      "name": "列表",
+      "font_class": "liebiao",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    },
+    {
+      "icon_id": "8094192",
+      "name": "关闭",
+      "font_class": "guanbi",
+      "unicode": "e647",
+      "unicode_decimal": 58951
+    },
+    {
+      "icon_id": "8361807",
+      "name": "搜索",
+      "font_class": "sousuo",
+      "unicode": "e6c7",
+      "unicode_decimal": 59079
+    },
+    {
+      "icon_id": "10904038",
+      "name": "可见性",
+      "font_class": "see",
+      "unicode": "e60f",
+      "unicode_decimal": 58895
+    },
+    {
+      "icon_id": "14206539",
+      "name": "down",
+      "font_class": "up",
+      "unicode": "e6c8",
+      "unicode_decimal": 59080
+    },
+    {
+      "icon_id": "14206546",
+      "name": "down",
+      "font_class": "link",
+      "unicode": "e6c9",
+      "unicode_decimal": 59081
+    },
+    {
+      "icon_id": "14206560",
+      "name": "down",
+      "font_class": "back",
+      "unicode": "e6ca",
+      "unicode_decimal": 59082
+    }
+  ]
+}

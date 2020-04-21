@@ -1,34 +1,15 @@
 # lttao-ui
 
-## Project setup
+## Install
 ```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
+npm install lttao -S
 ```
 
-### Compiles and minifies for production
+### Quickstart
 ```
-npm run build
-```
+import Vue from "vue";
+import { slider } from "lttao-ui";
+import "lttao-ui/lib/index.css"
 
-### Run your unit tests
+Vue.use(slider);
 ```
-npm run test:unit
-```
-
-### Run your end-to-end tests
-```
-npm run test:e2e
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).

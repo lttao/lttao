@@ -1,6 +1,6 @@
 {
   "name": "lttao-ui",
-  "version": "0.1.0",
+  "version": "0.1.5",
   "private": false,
   "main": "lib/lttao-ui.umd.min.js",
   "keyword": "ui UI ui组件 lt lttao tao lttao-ui",

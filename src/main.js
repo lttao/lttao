@@ -4,6 +4,10 @@ import router from "./router";
 
 Vue.config.productionTip = false;
 
+import lttao from './../packages/index'
+
+Vue.use(lttao)
+
 import toast from "./components/toast";
 import loading from "./components/loading";
 Vue.prototype.$toast = toast;
